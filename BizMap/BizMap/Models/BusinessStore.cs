@@ -13,6 +13,7 @@ namespace BizMap.Models
         public BusinessStore()
         {
             Id = Guid.NewGuid().ToString().Replace("-", string.Empty);
+            DateCreated = DateTime.Now;
         }
 
         [Key]
@@ -29,7 +30,7 @@ namespace BizMap.Models
         [Column(TypeName = "float(10, 6)")]
         public float Longitute { get; set; }
         public int Views { get; set; }
-
+        public DateTime DateCreated { get; set; }
 
         public string BusinessUserId { get; set; }
         public virtual BusinessUser BusinessUser { get; set; }

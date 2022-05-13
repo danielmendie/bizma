@@ -17,8 +17,9 @@ namespace BizMap.DataTransfer
         public string Category { get; init; }
         public string Address { get; init; }
         public string BusinessCode { get; init; }
-        public int Distance { get; init; }
-
+        public string Distance { get; init; }
+        public float Latitude { get; init; }
+        public float Longitude { get; init; }
     }
 
     public record BusinessInfo: StatusResponse
@@ -28,8 +29,6 @@ namespace BizMap.DataTransfer
 
     public record BusinessInformation : BusinessSummary
     {
-        public float Latitude { get; init; }
-        public float Longitude { get; init; }
         public string Country { get; init; }
         public string State { get; init; }
         public string City { get; init; }

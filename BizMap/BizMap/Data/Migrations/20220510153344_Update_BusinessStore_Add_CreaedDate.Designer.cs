@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Skybrinns.Server.Data;
 
 namespace BizMap.Data.Migrations
 {
     [DbContext(typeof(BizDbContext))]
-    partial class BizDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220510153344_Update_BusinessStore_Add_CreaedDate")]
+    partial class Update_BusinessStore_Add_CreaedDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
