@@ -68,12 +68,13 @@ namespace BizMap
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BizMap v1"));
-
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("OpenCorsPolicy"); 
 
             app.UseAuthorization();
 
